@@ -1,9 +1,6 @@
-
 for (let i = 1; i < 10; i++) {
-    let allHole = document.getElementById(`hole${i}`);
-    
-    allHole.onclick = function () {
-        
+    let allHole = document.getElementById(`hole${i}`);   
+    allHole.onclick = function () {       
         if (allHole.className.includes( 'hole_has-mole' ) == true) {
             dead.textContent = +dead.textContent + 1;
             if (dead.textContent >= 10) {
