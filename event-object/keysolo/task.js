@@ -1,22 +1,22 @@
 class Game {
-  constructor(container) {
-    this.container = container;
-    this.wordElement = container.querySelector('.word');
-    this.winsElement = container.querySelector('.status__wins');
-    this.lossElement = container.querySelector('.status__loss');
+	constructor(container) {
+		this.container = container;
+		this.wordElement = container.querySelector('.word');
+		this.winsElement = container.querySelector('.status__wins');
+		this.lossElement = container.querySelector('.status__loss');
 
     this.reset();
 
     this.registerEvents();
-  }
-
-  reset() {
+	}
+	
+	reset() {
     this.setNewWord();
     this.winsElement.textContent = 0;
     this.lossElement.textContent = 0;
-  }
-
-  registerEvents() {
+	}
+	
+	registerEvents() {
     /*
       TODO:
       Написать обработчик события, который откликается
@@ -25,6 +25,17 @@ class Game {
       При неправильном вводе символа - this.fail();
       DOM-элемент текущего символа находится в свойстве this.currentSymbol.
      */
+	 
+	 document.addEventListener('keydown', event => {
+		
+		if (event.key === this.currentSymbol.textContent) {
+			this.success();
+		} else {
+			this.fail();
+		};
+
+	});
+
   }
 
   success() {
