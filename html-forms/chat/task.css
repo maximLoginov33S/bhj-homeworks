@@ -78,6 +78,7 @@
 .chat-widget__input {
   border: 1px solid gray;
   padding: 10px;
+  margin: 10px 0px 10px 0px;
 }
 
 .chat-widget__side-text {
