@@ -2,6 +2,15 @@ button {
   margin: 0 !important;
 }
 
+.content {
+	display: flex;
+}
+
+.tasks {
+	display: flex;
+	flex-direction: column;
+}
+
 .card {
   width: 600px;
 }
@@ -56,12 +65,15 @@ button {
 }
 
 .tasks__list {
+  display: flex;
+  flex-direction: column;
   margin-top: 10px;
 }
 
 .task__title {
   flex-grow: 1;
   padding: 10px 5px;
+  word-break: break-all;
 }
 
 .task__remove {
